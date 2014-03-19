@@ -1,0 +1,46 @@
+---
+layout: base
+---
+{% if page.cover_image %}
+<div class="article-cover">
+    <div>
+        <img src="/images/{{ page.cover_image }}" class="image">
+    </div>
+</div>
+{% endif %}
+<article>
+
+    <div class="container">
+      {% if post.author.username %}<img src="/images/avatars/{{ post.author.username }}.jpg" class="avatar">{% endif %}
+        <header>
+            <div class="meta">
+                By <address><a rel="author" href="{{ page.author.link }}" title="{{ page.author.name }}" target="_blank">{{ page.author.name }}</a> &mdash;
+                <time pubdate datetime="{{ page.date | date: "%Y-%d-%B" }}" title="{{ page.date | date: "%B %d, %Y" }}">{{ page.date | date: "%B %d, %Y" }}</time>
+            </div>
+            <h1 class="title">{{ page.title }}</h1>
+            {% if page.subtitle %}<h2 class="subtitle">{{ page.subtitle }}</h2>{% endif %}
+            {% include post/categories.html %}
+        </header>
+
+        <section>
+            {{ content }}
+            {% include _social.html %}
+        </section>
+
+        <footer>
+            <address>
+               {% if page.author.username %}<img src="/images/avatars/{{ page.author.username }}.jpg">{% endif %}
+                <p>Written by <strong>{{ page.author.name }}</strong><br>
+                <span class="muted">{{ page.author.bio }}</span>
+                </p>
+            </address>
+
+        </footer>
+
+        {% if site.inc.disqus.shortname and page.comments %}
+        <section>
+            {% include _disqus.html %}
+        </section>
+        {% endif %}
+    </div>
+</article>
