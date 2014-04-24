@@ -16,7 +16,7 @@ title: Publications
 # Thesis
 
 * (ES) González, C. 2013. [Diseño e implementación del software de vuelo para un nano-satélite tipo cubesat](http://tesis.uchile.cl/handle/2250/115307). Memoria de Ingeniero Civil Eléctrico. Santiago, Universidad de Chile, Facultad de Ciencias Físicas y Matemáticas.
-* (ES) Opazo, T. 2013. [Requerimientos, implementación y verificación del nano-satélite SUCHAI](). Memoria de Ingeniero Civil Eléctrico. Santiago, Universidad de Chile, Facultad de Ciencias Físicas y Matemáticas.
+* (ES) Opazo, T. 2013. [Requerimientos, implementación y verificación del nano-satélite SUCHAI](http://tesis.uchile.cl/handle/2250/115628). Memoria de Ingeniero Civil Eléctrico. Santiago, Universidad de Chile, Facultad de Ciencias Físicas y Matemáticas.
 * (ES) Derteano, S. 2012. [Aplicación y evaluación de estrategias para control de errores en canales satelitales mediante BICM](). Memoria de Ingeniero Civil Eléctrico. Santiago, Universidad de Chile, Facultad de Ciencias Físicas y Matemáticas.
 * (ES) Troncoso, F. 2012. [Evaluación y aplicación de estrategias para control de errores en canales satelitales mediante codificación algebraica](). Memoria de Ingeniero Civil Eléctrico. Santiago, Universidad de Chile, Facultad de Ciencias Físicas y Matemáticas.
 * (ES) Rojas, C. 2012. [Modelación estadística de canal satelital para aplicación en microsatélites](). Memoria de Ingeniero Civil Eléctrico. Santiago, Universidad de Chile, Facultad de Ciencias Físicas y Matemáticas.
