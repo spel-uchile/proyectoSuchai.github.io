@@ -6,7 +6,7 @@ subtitle: How to write a post
 cover_image: post-cover.jpg
 excerpt: Using markdown plain text to write a post
 
-draft: False
+draft: True
 
 author:
   name: Carlos González C.
