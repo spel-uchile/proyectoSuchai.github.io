@@ -3,7 +3,7 @@ layout: page
 title: Publications
 ---
 
-# Papers
+## Papers
 
 * Flores, F., Rondanelli, R., Díaz, M., Querel, R., Mundnich, K., Herrera, L. A., & Carricajo, T. The lifecycle of a radiosonde. Bulletin of the American Meteorological Society. (2013).
 * M. A. Diaz, M. Zettergren, J. L. Semeter and M. Oppenheim. Plasma parameter analysis of the Langmuir Decay process via Particle-In-Cell simulations. Ann. Geophys., August 2012.
@@ -13,7 +13,7 @@ title: Publications
 * Mardones, J., Iori, G., Becerra, A., Diaz, M., & Zagal, J. C. (2012). Using Digital Fabrication on Small Satellite Projects. In Proceedings of the International Symposium on Small Satellites Systems and Services-4S Symposium-, Portoro, Slovenia.
 * Escobar, E., Diaz, M., & Zagal, J. C. Design automation for satellite passive thermal control.
 
-# Thesis
+## Thesis
 
 * (ES) González, C. 2013. [Diseño e implementación del software de vuelo para un nano-satélite tipo cubesat](http://tesis.uchile.cl/handle/2250/115307). Memoria de Ingeniero Civil Eléctrico. Santiago, Universidad de Chile, Facultad de Ciencias Físicas y Matemáticas.
 * (ES) Opazo, T. 2013. [Requerimientos, implementación y verificación del nano-satélite SUCHAI](http://tesis.uchile.cl/handle/2250/115628). Memoria de Ingeniero Civil Eléctrico. Santiago, Universidad de Chile, Facultad de Ciencias Físicas y Matemáticas.

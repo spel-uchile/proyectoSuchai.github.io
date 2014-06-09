@@ -1,0 +1,11 @@
+---
+layout: page
+---
+
+<div class="about">
+    <ul>
+    {% for member in page.team %}
+        <li><p>{{member.name}}</p></li>
+    {% endfor %}
+    </ul>
+</div>
