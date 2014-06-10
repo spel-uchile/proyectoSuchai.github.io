@@ -2,10 +2,18 @@
 layout: page
 ---
 
-<div class="about">
-    <ul>
+<div class="pure-g">
     {% for member in page.team %}
-        <li><p>{{member.name}}</p></li>
+        <div class="pure-u-1-3">
+            <div><img class="img-center" src="{{member.profile}}"></div>
+            <h3 class="h1-about">{{member.name}}</h3>
+            <h4 class="h2-bout">{{member.grade}}</h4>
+            <p class="p-bout">{{member.bio}}</p>
+            <ul>
+                {% if member.mail %}<a class="pure-button pure-button-primary" href={{member.mail}}><i class="fa fa-envelope"></i></a>{% endif %}
+                {% if member.github %}<a class="pure-button pure-button-primary" href={{member.github}}><i class="fa fa-github-square"></i></a>{% endif %}
+                {% if member.linkedin %}<a class="pure-button pure-button-primary" href={{member.linkedin}}><i class="fa fa-linkedin-square"></i></a>{% endif %}
+            </ul>
+        </div>
     {% endfor %}
-    </ul>
 </div>
