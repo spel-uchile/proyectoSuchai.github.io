@@ -1,9 +1,17 @@
 /* Text styles */
-h1{
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    /* Set your content font stack here: */
+    font-family: "Open Sans", sans-serif;
+}
+
+h1, h3{
     color: #C93636;
 }
 
-h2{
+h2, h4{
     color: #808080;
 }
 
@@ -49,6 +57,7 @@ text-align: justify;
 }
 
 .f-box {
+    /*Footer box*/
     background-color: #C93636;
     color: #bebebe;
 }

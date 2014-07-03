@@ -1,0 +1,20 @@
+---
+layout: page
+---
+
+<div class="pure-g">
+    {% for project in page.projects %}
+        <div class="pure-u-1-3">
+            <div><img class="img-center" src="{{project.image}}"></div>
+        </div>
+        <div class="pure-u-2-3">
+            <h3 class="h1-about">{{project.name}}</h3>
+            <h4 class="h2-bout">{{project.brief}}</h4>
+            <p class="p-bout">{{project.description}}</p>
+            <ul class="fa-ul">
+                {% if project.site %}<li><i class="fa-li fa fa-external-link-square"></i><a href={{project.site}}>{{project.site}}</a></li>{% endif %}
+                {% if project.github %}<li><i class="fa-li fa fa-github-square"></i><a href={{project.github}}>{{project.github}}</a></li>{% endif %}
+            </ul>
+        </div>
+    {% endfor %}
+</div>
