@@ -10,51 +10,53 @@ title: SPEL | Space and Planetary Exploration Laboratory
 
 <!-- Banner image -->
 <div class="pure-g">
-    <div class="pure-u-1-1">
+    <div class="pure-u-1">
         <p><img class= "pure-img img-center" src={{home_page.banner}}></p>
     </div>
 </div>
 
 <!-- Columns with research fields -->
 <div class="pure-g content t-box">
-    <div class="pure-u-1-1"><h2 class="text-center">{{home_page.tagline}}</h2></div>
+    
+    <!--   Tag line   -->
+    <div class="pure-u-1"><h2 class="text-center">{{home_page.tagline}}</h2></div>
+    
     <!--3 Columns Section -->
-    <div class="pure-u-1-4 l-box">
-        <h3><i class="fa fa-rocket"></i>
-            Space
-        </h3>
-        <p>
-            {{home_page.space}}
-        </p>
+    <div class="pure-u-1 pure-u-lg-1-3">
+    <div class="l-box">
+        <h3><i class="fa fa-rocket"></i> Space </h3>
+        <p> {{home_page.space}} </p>
     </div>
-    <div class="pure-u-1-4 l-box">
-        <h3><i class="fa fa-globe"></i>
-            Geosciences
-        </h3>
-        <p>
-            {{home_page.geoscience}}
-        </p>
     </div>
-    <div class="pure-u-1-4 l-box">
-        <h3 class="content-subhead">
-            <i class="fa fa-power-off"></i>
-            Miniaturization
-        </h3>
-        <p>
-            {{home_page.miniaturization}}
-        </p>
+    
+    <div class="pure-u-1 pure-u-lg-1-3">
+    <div class="l-box">
+        <h3><i class="fa fa-globe"></i> Geosciences </h3>
+        <p> {{home_page.geoscience}} </p>
+    </div>
+    </div>
+    
+    <div class="pure-u-1 pure-u-lg-1-3">
+    <div class="l-box">
+        <h3 class="content-subhead"><i class="fa fa-power-off"></i> Miniaturization </h3>
+        <p> {{home_page.miniaturization}} </p>
+    </div>
     </div>
 </div>
 
 <!-- Long description -->
 <div class="pure-g l-box c-box">
     <!-- Text -->
-    <div class="pure-u-3-5 content">
-        <h2>Description</h2>
-        <p>{{home_page.content}}</p>
+    <div class="pure-u-1 pure-u-lg-3-5 content">
+        <div class="l-box">
+            <h2>Description</h2>
+            <p>{{home_page.content}}</p>
+        </div>
     </div>
     <!-- Image -->
-    <div class="pure-u-2-5">
-        <img class="pure-img img-center" alt="Lab" width="300" src="/images/home/spel_lab.jpg">
+    <div class="pure-u-1 pure-u-lg-2-5">
+        <div class="l-box">
+            <img class="pure-img img-center" alt="Lab" src="/images/home/spel_lab.jpg">
+        </div>
     </div>
 </div>
