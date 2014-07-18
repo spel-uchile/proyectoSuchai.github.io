@@ -61,3 +61,12 @@ text-align: justify;
     background-color: #C93636;
     color: #bebebe;
 }
+
+/* About styles */
+.ul-about{
+    /* Positioning */
+    padding:0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
