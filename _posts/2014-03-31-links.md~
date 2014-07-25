@@ -1,11 +1,11 @@
 ---
 layout: links
 title: Links of Interest
-subtitle: 
+subtitle: External links related to SPEL work or we found interesting
 links:
     - name: SUCHAI
       brief: Satellite of University of Chile for Aerospace Investigation
-      description: SUCHAI is the first chilean made satellite project developed by students, engineers and professors of many departments of the University of Chile such as the Electrical Engineering, Physics and Mechanical Engineering Departments. The main goal is to design, construct, launch and operate a picosatellite. External links related to SPEL work or we found interesting
+      description: SUCHAI is the first chilean made satellite project developed by students, engineers and professors of many departments of the University of Chile such as the Electrical Engineering, Physics and Mechanical Engineering Departments. The main goal is to design, construct, launch and operate a picosatellite.
       image: /images/projects/suchai.jpg
       site: http://spel.ing.uchile.cl/suchai.html
       github: https://github.com/proyectoSuchai
