@@ -20,10 +20,26 @@ h2, h4{
     font-style: italic;
 }
 
+/* Menu styles */
+.home-menu {
+    padding: 0.1em;
+    text-align: center;
+    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+}
+
 /* Content styles */
 .text-center {
     text-align: center;
 }
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
 
 .block-center {
     margin-left: auto;
@@ -58,6 +74,7 @@ text-align: justify;
 
 .f-box {
     /*Footer box*/
+/*     padding: 0.5em; */
     background-color: #C93636;
     color: #bebebe;
 }
@@ -65,7 +82,7 @@ text-align: justify;
 /* About styles */
 .ul-about{
     /* Positioning */
-    padding:0;
+    padding: 0;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
