@@ -2,3 +2,11 @@ _site
 .idea
 .directory
 *.orig
+
+#toopazo
+#kdiff3 .orig
+*.orig
+#gedit
+*~
+#pycharm
+*.idea
