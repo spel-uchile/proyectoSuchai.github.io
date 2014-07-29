@@ -34,11 +34,7 @@
                 <li><a href="/">Home</a></li>
                 {% for page in site.posts %}
                 {% if page.title != "Home" %}
-                {% if page.layout == "page" or
-                      page.layout == "blog"  or
-                      page.layout == "links" or
-                      page.layout == "about" or
-                      page.layout == "projects" %}
+                {% if page.layout == "page" or page.layout == "blog"  or page.layout == "links" or page.layout == "about" or page.layout == "projects" %}
                 <li><a href="{{page.url}}">{{page.title}}</a></li>
                 {% endif %}
                 {% endif %}
