@@ -87,3 +87,9 @@ text-align: justify;
     margin-right: auto;
     text-align: center;
 }
+
+/* Image post styles */
+.p-img{
+    color: #808080;
+    font-size: small;
+}
