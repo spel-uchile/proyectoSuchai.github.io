@@ -30,12 +30,8 @@ simulating the conditions of the rocket in a real launch.
 
 Performing those tests is the mandatory step previous to actually launch the satellite.
 
-![1](images/test_brasil/suchai_inpe_1.png)
-
-![1](images/test_brasil/suchai_inpe_2.jpg)
-
-![1](images/test_brasil/suchai_inpe_3.jpg)
-
-![1](images/test_brasil/suchai_inpe_4.jpg)
-
-![1](images/test_brasil/suchai_inpe_5.jpg)
+{% include image.html src="images/test_brasil/suchai_inpe_1.png" title="" %}
+{% include image.html src="images/test_brasil/suchai_inpe_2.jpg" title="" %}
+{% include image.html src="images/test_brasil/suchai_inpe_3.jpg" title="" %}
+{% include image.html src="images/test_brasil/suchai_inpe_4.jpg" title="" %}
+{% include image.html src="images/test_brasil/suchai_inpe_5.jpg" title="" %}
