@@ -1,8 +1,9 @@
-<input type=text value="00SUCHAI02111111111 TX0" id="beacon">
-<input type=button value="Decode" onClick="decode('result')">
-<div id="result" style="border: 1px dashed red;">
-(content will appear here)
+<div>
+    <input type=text class="pure-u-3-4" placeholder="00SUCHAI02111111111 TX0" id="beacon">
+    <button type="submit" onClick="decode('result')">Decode</button>
+    <div id="result"></div>
 </div>
+
 
 <script>
 var iden = "suchai0";
@@ -26,8 +27,16 @@ function decode(id) {
     console.log(l_iden, i_iden, i_type, i_data);
     console.log(type, data);
     
+    var iden_text =
+    "<ul>"+
+    "<li> Identifier: SUCHAI </li>" +
+    "<li> Country   : Chile  </li>" +
+    "<li> Mail      : suchai@ing.uchile.cl </li>" +
+    "<li> Frame type: " + type + "</li>" +
+    "</ul>"
+    
     if(type == 0){
-    	result = "SUCHAI Satellite\n http://spel.ing.uchile.cl/suchai";
+    	result = "";
     }
     else if(type == 1){
     	result = decode_beacon_general(data);
@@ -42,7 +51,7 @@ function decode(id) {
     	result = "Please enter a valid beacon";
     }
     
-    $('#'+id).html(result);
+    $('#'+id).html(iden_text +  result);
 }
 
 function decode_beacon_general(data){
@@ -72,14 +81,14 @@ function decode_beacon_hardware(data){
 	var text = 
     "<ul>" +
     "<li>RTC alive: " + parseBool(data.substr(0, 1)) + "</li>" +
-    "<li>TRX alive: " + parseBool(data.substr(0, 1)) + "</li>" +
-    "<li>EPS alive: " + parseBool(data.substr(0, 1)) + "</li>" +
-    "<li>EEPROM alive: " + parseBool(data.substr(0, 1)) + "</li>" +
-    "<li>SD alive: " + parseBool(data.substr(0, 1)) + "</li>" +
-    "<li>Langmuir alive: " + parseBool(data.substr(0, 1)) + "</li>" +
-    "<li>Temperature alive: " + parseBool(data.substr(0, 1)) + "</li>" +
-    "<li>GPS alive: " + parseBool(data.substr(0, 1)) + "</li>" +
-    "<li>Camera alive: " + parseBool(data.substr(0, 1)) + "</li>" +
+    "<li>TRX alive: " + parseBool(data.substr(1, 1)) + "</li>" +
+    "<li>EPS alive: " + parseBool(data.substr(2, 1)) + "</li>" +
+    "<li>EEPROM alive: " + parseBool(data.substr(3, 1)) + "</li>" +
+    "<li>SD alive: " + parseBool(data.substr(4, 1)) + "</li>" +
+    "<li>Langmuir alive: " + parseBool(data.substr(5, 1)) + "</li>" +
+    "<li>Temperature alive: " + parseBool(data.substr(6, 1)) + "</li>" +
+    "<li>GPS alive: " + parseBool(data.substr(7, 1)) + "</li>" +
+    "<li>Camera alive: " + parseBool(data.substr(8, 1)) + "</li>" +
     "</ul>";
     
     return text;
