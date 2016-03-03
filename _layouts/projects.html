@@ -12,6 +12,9 @@ layout: page
                     {% if page.github %}<li><i class="fa-li fa fa-github-square"></i><a href={{page.github}}>{{page.github}}</a></li>{% endif %}
                 </ul>
             {% endif %}-->
+            {% if page.subtitle %}
+                <h2 class="content-head is-center">{{ page.subtitle }}</h2>
+            {% endif %}
             <h1 class="content-head is-center">{{ page.title }}</h1>
         </div>
     </div>
