@@ -28,8 +28,8 @@ layout: page
         <div class="pure-u-1 pure-u-sm-2-3">
             <h3 class="h1-about">Name: {{project.name}}</h3>
             <h3 class="h1-about">Status: {{project.status}}</h3>
-            <h4 class="h2-bout">Description: {{project.brief}}</h4>
-            <p class="p-bout">{{project.description}}</p>
+            <!--<h4 class="h2-bout">{{project.brief}}</h4>-->
+            <p class="p-bout">Description: {{project.description}}</p>
             <ul class="fa-ul">
                 {% if project.site %}<li><i class="fa-li fa fa-external-link-square"></i><a href={{project.site}}>{{project.site}}</a></li>{% endif %}
                 {% if project.github %}<li><i class="fa-li fa fa-github-square"></i><a href={{project.github}}>{{project.github}}</a></li>{% endif %}
