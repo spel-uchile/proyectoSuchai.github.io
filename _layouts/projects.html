@@ -15,7 +15,7 @@ layout: page
             <h1 class="content-head is-center">{{ page.title }}</h1>
             {% if page.brief %}
                 <!--<h3 class="content-head is-center">{{ page.brief }}</h3>-->
-                <h4 class="content-head is-center">{{ page.brief }}</h4>
+                <h2 class="content-head is-center">{{ page.brief }}</h2>
             {% endif %}
         </div>
     </div>
@@ -26,9 +26,9 @@ layout: page
             <div><img class="pure-img img-center" src="{{project.image}}"></div>
         </div>
         <div class="pure-u-1 pure-u-sm-2-3">
-            <h3 class="h1-about">{{project.name}}</h3>
-            <h3 class="h1-about">status: {{project.status}}</h3>
-            <h4 class="h2-bout">{{project.brief}}</h4>
+            <h3 class="h1-about">Name: {{project.name}}</h3>
+            <h3 class="h1-about">Status: {{project.status}}</h3>
+            <h4 class="h2-bout">Description: {{project.brief}}</h4>
             <p class="p-bout">{{project.description}}</p>
             <ul class="fa-ul">
                 {% if project.site %}<li><i class="fa-li fa fa-external-link-square"></i><a href={{project.site}}>{{project.site}}</a></li>{% endif %}
