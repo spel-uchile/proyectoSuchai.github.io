@@ -15,7 +15,7 @@ layout: page
             <h1 class="content-head is-center">{{ page.title }}</h1>
             {% if page.brief %}
                 <!--<h3 class="content-head is-center">{{ page.brief }}</h3>-->
-                <h2 class="content-head is-center">{{ page.brief }}</h2>
+                <h4 class="content-head is-center">{{ page.brief }}</h4>
             {% endif %}
         </div>
     </div>
@@ -27,6 +27,7 @@ layout: page
         </div>
         <div class="pure-u-1 pure-u-sm-2-3">
             <h3 class="h1-about">{{project.name}}</h3>
+            <h3 class="h1-about">status: {{project.status}}</h3>
             <h4 class="h2-bout">{{project.brief}}</h4>
             <p class="p-bout">{{project.description}}</p>
             <ul class="fa-ul">
@@ -35,4 +36,5 @@ layout: page
             </ul>
         </div>
     {% endfor %}
+    
 </div>
