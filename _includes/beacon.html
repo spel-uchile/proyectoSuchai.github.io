@@ -1,9 +1,8 @@
 <div>
-    <input type=text class="pure-u-3-4" placeholder="00SUCHAI02111111111 TX0" id="beacon">
-    <button type="submit" onClick="decode('result')">Decode</button>
-    <div id="result"></div>
+ <p markdown="span"><input type=text class="pure-u-3-4" placeholder="00SUCHAI02111111111 TX0" id="beacon"/></p>
+ <button type="submit" onClick="decode('result')">Decode</button>
+ <div id="result"></div>
 </div>
-
 
 <script>
 var iden = "suchai0";
@@ -11,121 +10,121 @@ var l_iden = iden.length;
 
 var falsy = /^(?:f(?:alse)?|no?|0+)$/i;
 parseBool = function(val) { 
-    return !falsy.test(val) && !!val;
+ return !falsy.test(val) && !!val;
 }
 
 function decode(id) {
-    var result;    
-    var beacon = $('#beacon').val().toLowerCase();
-        
-    var i_iden = beacon.indexOf(iden);
-    var i_type = i_iden + l_iden;
-    var i_data = i_type + 1;
-    var type = beacon.substr(i_type, 1);
-    var data = beacon.substr(i_data);
-    
-    console.log(l_iden, i_iden, i_type, i_data);
-    console.log(type, data);
-    
-    var iden_text =
-    "<ul>"+
-    "<li> Identifier: SUCHAI </li>" +
-    "<li> Country   : Chile  </li>" +
-    "<li> Mail      : suchai@ing.uchile.cl </li>" +
-    "<li> Frame type: " + type + "</li>" +
-    "</ul>"
-    
-    if(type == 0){
-    	result = "";
-    }
-    else if(type == 1){
-    	result = decode_beacon_general(data);
-    }
-    else if(type == 2){
-    	result = decode_beacon_hardware(data);
-    }
-    else if(type == 3){
-    	result = decode_beacon_trx(data);
-    }
-    else{
-    	result = "Please enter a valid beacon";
-    }
-    
-    $('#'+id).html(iden_text +  result);
+ var result; 
+ var beacon = $('#beacon').val().toLowerCase();
+  
+ var i_iden = beacon.indexOf(iden);
+ var i_type = i_iden + l_iden;
+ var i_data = i_type + 1;
+ var type = beacon.substr(i_type, 1);
+ var data = beacon.substr(i_data);
+ 
+ console.log(l_iden, i_iden, i_type, i_data);
+ console.log(type, data);
+ 
+ var iden_text =
+ "<ul>"+
+ "<li> Identifier: SUCHAI </li>" +
+ "<li> Country   : Chile  </li>" +
+ "<li> Mail   : suchai@ing.uchile.cl </li>" +
+ "<li> Frame type: " + type + "</li>" +
+ "</ul>"
+ 
+ if(type == 0){
+ 	result = "";
+ }
+ else if(type == 1){
+ 	result = decode_beacon_general(data);
+ }
+ else if(type == 2){
+ 	result = decode_beacon_hardware(data);
+ }
+ else if(type == 3){
+ 	result = decode_beacon_trx(data);
+ }
+ else{
+ 	result = "Please enter a valid beacon";
+ }
+ 
+ $('#'+id).html(iden_text +  result);
 }
 
 function decode_beacon_general(data){
 	var hr_no_reset = parseInt(data.substr(0, 2));  // Hours without reset
-    var reset_count = parseInt(data.substr(2, 2));  // Reset count
-    var reset_sourc = parseInt(data.substr(4, 1));  // Reset source
-    var ant_deploy = parseBool(data.substr(5, 1));  // Antena deployed
-    var ppc_op_mode = parseInt(data.substr(6, 1));  // Operation mode
-    var ppc_oscilat = parseInt(data.substr(7, 1));  // Oscilator in use
-    var ppc_enwdt = parseBool(data.substr(8, 1));  // WTD enable
-    
-    var text = 
-    "<ul>"+
-    "<li>Hours without reset: " + hr_no_reset + "hrs.</li>" +
-    "<li>Reset counter: " + reset_count + "</li>"+
-    "<li>Reset source: " + reset_sourc + "</li>"+
-    "<li>Antena deployed:" + ant_deploy + "</li>"+
-    "<li>Operation mode:" + ppc_op_mode +"</li>"+
-    "<li>Oscilator in use:" + ppc_oscilat +"</li>"+
-    "<li>Watchdog enabled:" + ppc_enwdt + "</li>" +
-    "</ul>";
-    
-    return text;
+ var reset_count = parseInt(data.substr(2, 2));  // Reset count
+ var reset_sourc = parseInt(data.substr(4, 1));  // Reset source
+ var ant_deploy = parseBool(data.substr(5, 1));  // Antena deployed
+ var ppc_op_mode = parseInt(data.substr(6, 1));  // Operation mode
+ var ppc_oscilat = parseInt(data.substr(7, 1));  // Oscilator in use
+ var ppc_enwdt = parseBool(data.substr(8, 1));  // WTD enable
+ 
+ var text = 
+ "<ul>"+
+ "<li>Hours without reset: " + hr_no_reset + "hrs.</li>" +
+ "<li>Reset counter: " + reset_count + "</li>"+
+ "<li>Reset source: " + reset_sourc + "</li>"+
+ "<li>Antena deployed:" + ant_deploy + "</li>"+
+ "<li>Operation mode:" + ppc_op_mode +"</li>"+
+ "<li>Oscilator in use:" + ppc_oscilat +"</li>"+
+ "<li>Watchdog enabled:" + ppc_enwdt + "</li>" +
+ "</ul>";
+ 
+ return text;
 }
 
 function decode_beacon_hardware(data){
 	var text = 
-    "<ul>" +
-    "<li>RTC alive: " + parseBool(data.substr(0, 1)) + "</li>" +
-    "<li>TRX alive: " + parseBool(data.substr(1, 1)) + "</li>" +
-    "<li>EPS alive: " + parseBool(data.substr(2, 1)) + "</li>" +
-    "<li>EEPROM alive: " + parseBool(data.substr(3, 1)) + "</li>" +
-    "<li>SD alive: " + parseBool(data.substr(4, 1)) + "</li>" +
-    "<li>Langmuir alive: " + parseBool(data.substr(5, 1)) + "</li>" +
-    "<li>Temperature alive: " + parseBool(data.substr(6, 1)) + "</li>" +
-    "<li>GPS alive: " + parseBool(data.substr(7, 1)) + "</li>" +
-    "<li>Camera alive: " + parseBool(data.substr(8, 1)) + "</li>" +
-    "</ul>";
-    
-    return text;
+ "<ul>" +
+ "<li>RTC alive: " + parseBool(data.substr(0, 1)) + "</li>" +
+ "<li>TRX alive: " + parseBool(data.substr(1, 1)) + "</li>" +
+ "<li>EPS alive: " + parseBool(data.substr(2, 1)) + "</li>" +
+ "<li>EEPROM alive: " + parseBool(data.substr(3, 1)) + "</li>" +
+ "<li>SD alive: " + parseBool(data.substr(4, 1)) + "</li>" +
+ "<li>Langmuir alive: " + parseBool(data.substr(5, 1)) + "</li>" +
+ "<li>Temperature alive: " + parseBool(data.substr(6, 1)) + "</li>" +
+ "<li>GPS alive: " + parseBool(data.substr(7, 1)) + "</li>" +
+ "<li>Camera alive: " + parseBool(data.substr(8, 1)) + "</li>" +
+ "</ul>";
+ 
+ return text;
 }
 
 function decode_beacon_trx(data){
-        
+  
 	var count_tm = parseInt(data.substr(0, 2));
-    var count_tc = parseInt(data.substr(2, 2));
-    var tx_baud = parseInt(data.substr(4, 1));
-    var rx_baud = parseInt(data.substr(5, 1));
-    var do_rs = parseBool(data.substr(6, 1));
-    var do_random = parseBool(data.substr(7, 1));
-    var do_viterbi = parseBool(data.substr(8, 1));
-    
-    if(tx_baud == 1){tx_baud = 1200;}
-    else if(tx_baud == 2){tx_baud = 2400;}
-    else if(tx_baud == 4){tx_baud = 4800;}
-    
-    if(rx_baud == 1){rx_baud = 1200;}
-    else if(rx_baud == 2){rx_baud = 2400;}
-    else if(rx_baud == 4){rx_baud = 4800;}
+ var count_tc = parseInt(data.substr(2, 2));
+ var tx_baud = parseInt(data.substr(4, 1));
+ var rx_baud = parseInt(data.substr(5, 1));
+ var do_rs = parseBool(data.substr(6, 1));
+ var do_random = parseBool(data.substr(7, 1));
+ var do_viterbi = parseBool(data.substr(8, 1));
+ 
+ if(tx_baud == 1){tx_baud = 1200;}
+ else if(tx_baud == 2){tx_baud = 2400;}
+ else if(tx_baud == 4){tx_baud = 4800;}
+ 
+ if(rx_baud == 1){rx_baud = 1200;}
+ else if(rx_baud == 2){rx_baud = 2400;}
+ else if(rx_baud == 4){rx_baud = 4800;}
 	
-        
+  
 	var text =
-    "<ul>" +
-    "<li>Telemetry counter: " + count_tm + " frames</li>" +
-    "<li>Telecommand counter: " + count_tc + " frames</li>" +
-    "<li>TX baudrate: " + tx_baud + " bps</li>" +
-    "<li>RX baudrate: " + rx_baud + " bps</li>" +
-    "<li>Reed-Solomon enabled: " + do_rs + "</li>" +
-    "<li>Randomization enabled: " + do_random + "</li>" +
-    "<li>Viterbi enabled: " + do_viterbi + "</li>" +
-    "</ul>";
+ "<ul>" +
+ "<li>Telemetry counter: " + count_tm + " frames</li>" +
+ "<li>Telecommand counter: " + count_tc + " frames</li>" +
+ "<li>TX baudrate: " + tx_baud + " bps</li>" +
+ "<li>RX baudrate: " + rx_baud + " bps</li>" +
+ "<li>Reed-Solomon enabled: " + do_rs + "</li>" +
+ "<li>Randomization enabled: " + do_random + "</li>" +
+ "<li>Viterbi enabled: " + do_viterbi + "</li>" +
+ "</ul>";
 
-    
-    return text;
+ 
+ return text;
 }
 
 </script>
