@@ -79,6 +79,10 @@ text-align: justify;
     color: #bebebe;
 }
 
+.img-rounded {
+    border-radius: 50%;
+}
+
 /* About styles */
 .ul-about{
     /* Positioning */
