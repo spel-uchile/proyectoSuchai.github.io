@@ -3,14 +3,14 @@ layout: page
 ---
 
 <div class="pure-g">
-    <!-- Title -->
-    <div class="t-box pure-g">
-        <div class="pure-u-1">
-            {% if page.brief %}
-                <h2 class="content-head is-center">{{ page.brief }}</h2>
-            {% endif %}
-        </div>
-    </div>
+    <!--  Brief    -->
+    {% if page.brief %}
+      <div class="t-box pure-g">
+          <div class="pure-u-1">
+            <h2 class="content-head is-center">{{ page.brief }}</h2>
+          </div>
+      </div>
+    {% endif %}
 
     <!-- Content -->
     {% for link in page.links %}
