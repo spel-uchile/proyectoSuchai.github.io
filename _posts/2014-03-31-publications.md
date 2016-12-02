@@ -15,7 +15,7 @@ title: Publications
 
 ## Thesis
 
-* (ES) Rojas, M. 2016. [Diseño e implementación de una estación terrena en la banda de 2.4 GHz para nanosatélites tipo Cubesat de 2/3U](http://repositorio.uchile.cl/handle/2250/141321). Memoria de Ingeniero Civil Eléctrico. Santiago, Universidad de Chile, Facultad de Ciencias Físicas y Matemáticas.
+* (ES) Rojas, J. 2016. [Diseño e implementación de una estación terrena en la banda de 2.4 GHz para nanosatélites tipo Cubesat de 2/3U](http://repositorio.uchile.cl/handle/2250/141321). Memoria de Ingeniero Civil Eléctrico. Santiago, Universidad de Chile, Facultad de Ciencias Físicas y Matemáticas.
 * (ES) Vidal, M. 2016. [Desarrollo y evaluación de un sistema de comunicación para un nanosatélite](http://repositorio.uchile.cl/handle/2250/141235). Memoria de Ingeniero Civil Eléctrico. Santiago, Universidad de Chile, Facultad de Ciencias Físicas y Matemáticas.
 * (ES) González, C. 2013. [Diseño e implementación del software de vuelo para un nano-satélite tipo cubesat](http://tesis.uchile.cl/handle/2250/115307). Memoria de Ingeniero Civil Eléctrico. Santiago, Universidad de Chile, Facultad de Ciencias Físicas y Matemáticas.
 * (ES) Opazo, T. 2013. [Requerimientos, implementación y verificación del nano-satélite SUCHAI](http://tesis.uchile.cl/handle/2250/115628). Memoria de Ingeniero Civil Eléctrico. Santiago, Universidad de Chile, Facultad de Ciencias Físicas y Matemáticas.
